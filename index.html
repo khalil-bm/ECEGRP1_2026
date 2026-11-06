@@ -3,29 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Premier Site Web</title>
+    <title>Mon Site Professionnel & Moderne</title>
+    <style>
+        /* Styles Globaux & Polices */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        /* Barre de Navigation Épurée */
+        nav {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Section Héro (Introduction percutante) */
+        .hero {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Contenu Principal & Grille de Cartes */
+        main {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Section Interactive (JavaScript) */
+        .interactive-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 3rem;
+            margin-top: 4rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .counter-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .counter-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        #counter-value {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Pied de page */
+        footer {
+            background-color: #1f2937;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Bienvenue sur mon site web !</h1>
+    <!-- Barre de navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">MonProjet</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#demo">Démo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Zone de bienvenue (Hero) -->
+    <header class="hero">
+        <h1>Découvrez notre univers</h1>
+        <p>Une interface rapide, épurée et entièrement responsive pour offrir la meilleure expérience possible à vos utilisateurs.</p>
+        <a href="#services" class="cta-button">Commencer l'exploration</a>
     </header>
 
+    <!-- Contenu de la page -->
     <main>
-        <p>Ceci est un paragraphe de texte pour présenter mon contenu.</p>
         
-        <h2>Mes rubriques</h2>
-        <ul>
-            <li>Élément de liste numéro 1</li>
-            <li>Élément de liste numéro 2</li>
-        </ul>
+        <!-- Section Fonctionnalités -->
+        <section id="services">
+            <h2 class="section-title">Ce que nous vous offrons</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Performance</h3>
+                    <p>Un code propre et optimisé pour un chargement instantané de vos pages.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Design Moderne</h3>
+                    <p>Une esthétique soignée basée sur les dernières tendances du web.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Responsive</h3>
+                    <p>Votre site s'adapte parfaitement sur smartphone, tablette et ordinateur.</p>
+                </div>
+            </div>
+        </section>
 
-        <p>Voici un <a href="https://www.google.com">lien vers Google</a>.</p>
+        <!-- Section Interactive -->
+        <section id="demo" class="interactive-section">
+            <h2>Une touche de dynamisme</h2>
+            <p>Cliquez sur le bouton ci-dessous pour voir le script JavaScript à l'œuvre.</p>
+            <p>Nombre de clics : <span id="counter-value">0</span></p>
+            <button class="counter-btn" id="click-me">Augmenter le compteur</button>
+        </section>
+
     </main>
 
+    <!-- Pied de page -->
     <footer>
-        <p>© 2026 - Tous droits réservés.</p>
+        <p>© 2026 MonProjet. Tous droits réservés.</p>
     </footer>
+
+    <!-- Script JavaScript pour l'interactivité -->
+    <script>
+        const button = document.getElementById('click-me');
+        const counterDisplay = document.getElementById('counter-value');
+        let count = 0;
+
+        button.addEventListener('click', () => {
+            count++;
+            counterDisplay.textContent = count;
+        });
+    </script>
 
 </body>
 </html>
+
